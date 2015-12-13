@@ -1,6 +1,10 @@
-var babelify = require('babelify');
-var browserify = require('browserify-middleware');
-var keystone = require('keystone');
+'use strict';
+
+const babelify = require('babelify');
+const browserify = require('browserify-middleware');
+const graphqlHTTP = require('express-graphql');
+const graphQLSchema = require('../graphql/schema');
+const keystone = require('keystone');
 
 // Setup Route Bindings
 exports = module.exports = function (app) {
@@ -10,6 +14,8 @@ exports = module.exports = function (app) {
 			plugins: ['object-assign'],
 		})],
 	}));
+
+	app.use('/api/graphql', graphqlHTTP({ schema: graphQLSchema, graphiql: true }));
 
 	// Views
 	app.use(function (req, res) {
