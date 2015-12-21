@@ -10,7 +10,7 @@
     "browserify-middleware": "^7.0.0",
     "express-graphql": "^0.4.5",
     "graphql": "^0.4.14",
-    "keystone": "^0.3.13",
+    "keystone": "https://github.com/keystonejs/keystone.git",
     "keystone-graphql": "0.0.2",
     "model-transform": "^2.0.0",
     "react": "^0.14.3",
