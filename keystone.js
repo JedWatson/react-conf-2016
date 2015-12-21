@@ -7,7 +7,7 @@ keystone.init(config.options);
 keystone.import('models');
 keystone.set('routes', require('./routes'));
 keystone.set('nav', {
-	'people': ['people', 'companies'],
+	'people': 'people',
 	'talks': 'talks',
 });
 

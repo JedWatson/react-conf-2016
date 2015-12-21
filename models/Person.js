@@ -11,7 +11,7 @@ Person.add({
 	email: { type: Types.Email, initial: true, required: true, index: true },
 	password: { type: Types.Password, initial: true, required: true },
 }, 'Profile', {
-	company: { type: Types.Relationship, ref: 'Company' },
+	company: { type: String },
 	picture: { type: Types.CloudinaryImage },
 	github: { type: String, size: 'small' },
 	twitter: { type: String, size: 'small' },
