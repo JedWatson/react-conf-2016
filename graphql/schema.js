@@ -1,6 +1,6 @@
 var GraphQL = require('graphql');
-var keystoneTypes = require('./keystoneTypes');
 var keystone = require('keystone');
+var keystoneTypes = require('keystone-graphql').Types;
 
 var Person = keystone.list('Person');
 var Talk = keystone.list('Talk');
@@ -12,7 +12,7 @@ var personType = new GraphQL.GraphQLObjectType({
 			type: new GraphQL.GraphQLNonNull(GraphQL.GraphQLID),
 			description: 'The id of the user.',
 		},
-		name: { type: keystoneTypes.name(Person.fields.name) },
+		name: { type: keystoneTypes.Name(Person.fields.name) },
 		email: { type: GraphQL.GraphQLString },
 		company: { type: GraphQL.GraphQLString },
 		talks: {
@@ -37,8 +37,8 @@ var talkType = new GraphQL.GraphQLObjectType({
 			resolve: (source) =>
 				Person.model.findById(source.person).exec(),
 		},
-		time: keystoneTypes.datetime(Talk.fields.time),
-		description: { type: keystoneTypes.markdown(Talk.fields.description) },
+		time: keystoneTypes.Datetime(Talk.fields.time),
+		description: { type: keystoneTypes.Markdown(Talk.fields.description) },
 	}),
 });
 
