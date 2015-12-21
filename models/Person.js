@@ -30,4 +30,5 @@ Person.schema.virtual('canAccessKeystone').get(function() {
 transform.toJSON(Person);
 
 Person.defaultColumns = 'name, email, company, picture, isAdmin';
+Person.defaultSort = 'name.first';
 Person.register();

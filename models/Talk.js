@@ -19,5 +19,6 @@ Talk.add({
 
 transform.toJSON(Talk);
 
-Talk.defaultColumns = 'title, type, person, time';
+Talk.defaultColumns = 'title, time, person';
+Talk.defaultSort = 'time';
 Talk.register();
