@@ -8,8 +8,8 @@ var Person = new keystone.List('Person', {
 
 Person.add({
 	name: { type: Types.Name, required: true, index: true },
-	email: { type: Types.Email, initial: true, required: true, index: true },
-	password: { type: Types.Password, initial: true, required: true },
+	email: { type: Types.Email, initial: true, index: true },
+	password: { type: Types.Password, initial: true },
 }, 'Profile', {
 	company: { type: String },
 	picture: { type: Types.CloudinaryImage },
