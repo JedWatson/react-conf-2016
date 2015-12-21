@@ -9,7 +9,7 @@ exports.create = {
 			twitter: 'JedWatson',
 			homepage: 'http://thinkmill.com.au',
 			isAdmin: true,
-			__ref: 'jed',
+			__ref: 'JedWatson',
 		},
 		{
 			'name.full': 'Christopher Chedeau',
@@ -20,7 +20,7 @@ exports.create = {
 			twitter: 'vjeux',
 			homepage: 'http://blog.vjeux.com',
 			isAdmin: true,
-			__ref: 'vjeux',
+			__ref: 'ChristopherChedeau',
 		},
 		{
 			'name.full': 'Brent Vatne',
@@ -31,7 +31,7 @@ exports.create = {
 			twitter: 'notbrent',
 			homepage: 'http://brentvatne.ca',
 			isAdmin: true,
-			__ref: 'brent',
+			__ref: 'BrentVatne',
 		},
 		{
 			'name.full': 'Adam Miskiewicz',
@@ -42,7 +42,7 @@ exports.create = {
 			twitter: 'skevy',
 			homepage: 'http://www.adammiskiewicz.com/',
 			isAdmin: true,
-			__ref: 'skevy',
+			__ref: 'AdamMiskiewicz',
 		},
 	],
 };
