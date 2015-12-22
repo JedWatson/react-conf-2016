@@ -52,8 +52,15 @@ var scheduleType = new GraphQL.GraphQLObjectType({
 		},
 		label: { type: GraphQL.GraphQLString },
 		type: { type: GraphQL.GraphQLString },
+		day: { type: GraphQL.GraphQLString },
 		date: { type: GraphQL.GraphQLString },
+		time: { type: GraphQL.GraphQLString },
+		time24: { type: GraphQL.GraphQLString },
 		description: { type: GraphQL.GraphQLString },
+		dayNumber: {
+			type: GraphQL.GraphQLInt,
+			desciption: 'The index of the day',
+		},
 		duration: {
 			type: GraphQL.GraphQLInt,
 			desciption: 'The number of minutes this schedule item goes for',
