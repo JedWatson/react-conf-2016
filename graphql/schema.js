@@ -65,6 +65,13 @@ var scheduleType = new GraphQL.GraphQLObjectType({
 			type: GraphQL.GraphQLInt,
 			desciption: 'The number of minutes this schedule item goes for',
 		},
+		talks: {
+			type: new GraphQL.GraphQLList(talkType),
+			resolve: (source, args) => {
+				if (source.type !== 'talk' && source.type !== 'lightning') return null;
+				return Talk.model.find().where('time', source.key).exec();
+			}
+		},
 	}),
 });
 
