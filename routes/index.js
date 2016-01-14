@@ -10,9 +10,11 @@ const keystone = require('keystone');
 exports = module.exports = function (app) {
 
 	app.use('/js', browserify('./client/scripts', {
-		transform: [babelify.configure({
-			plugins: ['object-assign'],
-		})],
+		transform: [
+			babelify.configure({
+				presets: ['es2015', 'react'],
+			}),
+		],
 	}));
 
 	app.use('/api/graphql', graphqlHTTP({ schema: graphQLSchema, graphiql: true }));
